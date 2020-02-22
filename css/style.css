@@ -1,0 +1,76 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+/*Configuração inicial pra padronizar o design em tds navegadores*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Configuração de fonte para o body*/
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px;
+}
+
+/*Configuração de fundo, altura, corte, cor, gradiente do header*/
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, #7ed56fbd, #28b485bd),
+    url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  position: relative;
+}
+
+/*posição do logo*/
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+/*altura do logo*/
+.logo {
+  height: 35px;
+}
+
+/*Centraliza o caixa do header no centro da tela por meio do transform*/
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/*Texto do header, todo em H1 pois o Google usa o H1 para identificar do que se trata o site*/
+.heading-primary {
+    color: #FFF;
+    text-transform: uppercase;
+}
+
+.heading-primary-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+}
+
+.heading-primary-sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+}
