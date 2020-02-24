@@ -1,0 +1,47 @@
+/*Animação do Header main*/
+
+@keyframes MoveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+  
+    80% {
+      transform: translateX(10px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  /*Animação do Header sub*/
+  
+  @keyframes MoveInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+  
+    80% {
+      transform: translateX(-10px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes MoveInBotton {
+    0% {
+      opacity: 0;
+      transform: translateY(80px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

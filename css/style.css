@@ -1,65 +1,15 @@
 @charset "UTF-8";
 /*Variaveis de cores*/
 /*Configuração inicial pra padronizar o design em tds navegadores*/
-* {
+*
+*::after
+*::before {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: inherit; }
 
-/*Configuração de fonte para o body*/
 body {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #777;
-  padding: 30px; }
-
-/*Configuração de fundo, altura, corte, cor, gradiente do header*/
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url(../img/hero.jpg);
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-  position: relative;
-  /*posição do logo*/
-  /*altura do logo*/
-  /*Centraliza o caixa do header e button no centro da tela por meio do transform*/ }
-  .header__logo-box {
-    position: absolute;
-    top: 40px;
-    left: 40px; }
-  .header__logo {
-    height: 35px; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
-
-/*Texto do header, todo em H1 pois o Google usa o H1 para identificar do que se trata o site*/
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 30px; }
-  .heading-primary--main {
-    display: block;
-    font-size: 60px;
-    font-weight: 400;
-    letter-spacing: 35px;
-    animation-name: MoveInLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 20px;
-    font-weight: 700;
-    letter-spacing: 17.4px;
-    animation-name: MoveInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out; }
+  box-sizing: border-box; }
 
 /*Animação do Header main*/
 @keyframes MoveInLeft {
@@ -90,6 +40,37 @@ body {
   100% {
     opacity: 1;
     transform: translateY(0); } }
+
+/*Configuração de fonte para o body*/
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777;
+  padding: 30px; }
+
+/*Texto do header, todo em H1 pois o Google usa o H1 para identificar do que se trata o site*/
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 30px; }
+  .heading-primary--main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+    animation-name: MoveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+    animation-name: MoveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out; }
 
 .btn {
   /*Tira o sublinhado e deixa maiusculo o botão/link e configura o position pra animação*/
@@ -136,3 +117,27 @@ body {
     animation-duration: 0.7s;
     animation-timing-function: ease-out;
     animation-fill-mode: backwards; }
+
+/*Configuração de fundo, altura, corte, cor, gradiente do header*/
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.7), rgba(40, 180, 133, 0.7)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+  position: relative;
+  /*posição do logo*/
+  /*altura do logo*/
+  /*Centraliza o caixa do header e button no centro da tela por meio do transform*/ }
+  .header__logo-box {
+    position: absolute;
+    top: 40px;
+    left: 40px; }
+  .header__logo {
+    height: 35px; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }

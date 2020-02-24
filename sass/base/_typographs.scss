@@ -1,0 +1,38 @@
+/*Configuração de fonte para o body*/
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: $darkGrey;
+  padding: 30px;
+}
+
+/*Texto do header, todo em H1 pois o Google usa o H1 para identificar do que se trata o site*/
+.heading-primary {
+  color: $white;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+
+  &--main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: 35px;
+
+    animation-name: MoveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+
+  &--sub {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 17.4px;
+
+    animation-name: MoveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+  }
+}

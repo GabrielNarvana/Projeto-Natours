@@ -1,0 +1,62 @@
+.btn {
+    /*Tira o sublinhado e deixa maiusculo o botão/link e configura o position pra animação*/
+    &:link,
+    &:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 15px 40px;
+      display: inline-block;
+      border-radius: 100px;
+      transition: all 0.2s;
+      position: relative;
+    }
+  
+    /* Cria a sombra do botão */
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 15px rgba($black, 0.267);
+  
+      /*Animação do botão de trás*/
+      &::after {
+        transform: scaleX(1.3) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+    /* Tira a sombra quando clica*/
+    &:active {
+      transform: translateY(-2px);
+      box-shadow: 0 2px 7px rgba($black, 0.075);
+    }
+  
+    &--white {
+      background-color: $white;
+      color: $darkGrey;
+  
+      &::after {
+        background-color: rgba($white, 0.678);
+      }
+    }
+  
+    /*Coloca um segundo botão atrás que aumenta de tamanho pra criar o efeito*/
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      transition: all 0.3s;
+    }
+  
+    /*move o botão pra cima ao iniciar*/
+    &--animated {
+      animation-name: MoveInBotton;
+      animation-duration: 0.7s;
+      animation-timing-function: ease-out;
+      animation-fill-mode: backwards;
+    }
+  }
+  
